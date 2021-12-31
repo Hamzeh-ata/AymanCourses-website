@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700;800&display=swap');
+
+body{
+    background-image:url(./imgs/player_background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.video{
+    width: 850px;
+    height: 560px;
+    border-radius: 15px !important;
+}
+.text-wrap{
+    display: flex;
+    width: 100%;
+}
+.wrap-video{
+    display: flex;
+}
+.video_title{
+    color:white;
+    font-size: 30px;
+    font-family: 'Almarai', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #242424;
+  }
+  li{
+    display: inline;
+    float:right;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: 'Scheherazade New', serif;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 22px 20px 22px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a{
+  }
+  li a:hover {
+    background-color: #2b2c30;
+  }
+  .next-tutorial{
+      width: 100%;
+      padding: 18px;
+      font-size: 15px;
+      background-color: #2b2c30;
+      color: white;
+      border-color: #c9c9c9;
+      border-radius: 7px;
+      border-width: 0.5px;
+      cursor: pointer;
+      
+  }
+  .prev-tutorial{
+    width: 100%;
+    padding: 18px;
+    font-size: 15px;
+    background-color: #242424;
+    border-radius: 7px;
+    color: white;
+    border-width: 0.5px;
+    cursor: pointer;
+ 
+  }
+  .prev-tutorial:hover,
+.prev-tutorial:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+  color: #8fc866, 
+
+}

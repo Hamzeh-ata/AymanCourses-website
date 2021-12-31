@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700;800&display=swap');
+
+body{
+    background-image:url(./imgs/player_background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.video{
+    width: 850px;
+    height: 560px;
+    border-radius: 15px !important;
+}
+.text-wrap{
+    display: flex;
+    width: 100%;
+}
+.wrap-video{
+    display: flex;
+}
+.video_title{
+    color:white;
+    font-size: 30px;
+    font-family: 'Almarai', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #242424;
+  }
+  li{
+    display: inline;
+    float:right;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: 'Scheherazade New', serif;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 22px 20px 22px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a{
+  }
+  li a:hover {
+    background-color: #2b2c30;
+  }
+  .next-tutorial{
+      width: 100%;
+      padding: 18px;
+      font-size: 15px;
+      background-color: #2b2c30;
+      color: white;
+      border-color: #c9c9c9;
+      border-radius: 7px;
+      border-width: 0.5px;
+      cursor: pointer;
+      
+  }
+  .prev-tutorial{
+    width: 100%;
+    padding: 18px;
+    font-size: 15px;
+    background-color: #242424;
+    border-radius: 7px;
+    color: white;
+    border-width: 0.5px;
+    cursor: pointer;
+ 
+  }
+  .prev-tutorial:hover,
+.prev-tutorial:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+  color: #8fc866, 
+
+}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none !important;
+}
+.section-2{
+  background-color: #28292d;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 9px;
+  margin-bottom: 60px;
+}
+.top-section{
+  width: 100%;
+}
+.completed-courses{
+  color: white;
+  font-size: 15px;
+  padding-left: 10px;
+}
+.right-icon{
+  content: url(./imgs/right.png);
+  width: 100%;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+
+}
+.left-icon{
+  content: url(./imgs/left.png);
+  width: 100%;
+  height: 30px;
+  margin-right: 10px;
+ cursor: pointer;
+}
+.bar{
+  background-color: #979393;   
+  width: 100%;
+  height: 1.0px;
+  
+  }
+  .scroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap !important;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+}
+.course-img{
+  content: url(./imgs/course-img.jpg);
+  height: 190px;   
+  width: 100%;
+  display: inline-block !important; 
+  cursor: pointer;
+}
+.course-title{
+  font-size: 15px;
+  color: white;
+  padding-top: 2px;
+  display: inline-block !important; 
+}

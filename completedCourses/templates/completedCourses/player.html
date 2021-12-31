@@ -1,0 +1,69 @@
+    {% load static %}
+<html>
+<head>
+ <meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'player.css' %}" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<ul class="">
+    <li class="invalid nav-item"><a class="a" href="{% url 'completedCourses:home' %}">الرئيسية</a></li>
+    <li class="invalid nav-item"><a class="a" href="{% url 'completedCourses:completedcourses' %}">دورات مكتملة</a></li>
+    <li class="invalid nav-item"><a class="a" href="{% url 'audio:audio' %}">دورات صوتية</a></li>
+    <li class="invalid nav-item"><a class="a" href="{% url 'books:books' %}">محتوى كتابي</a></li>
+    <li class="invalid nav-item"><a class="a" href="{% url 'shorts:shorts' %}">مقاطع قصيرة</a></li>
+</ul>
+<div class="container">
+
+    <div class="text-wrap justify-content-center mt-5 mb-5">
+        {% for title in video_View %}
+    <div class="video_title text-center" >{{title.video_name}}</div>
+    {% endfor %}
+
+</div>
+    <div class="row ">
+<div class="col-12 d-flex justify-content-center">
+    {% for videos in video_View %}
+    <iframe  id=”player” class="video"
+    src={{videos.vido_url}}>
+    </iframe> 
+       {% endfor %}
+
+    </div>
+    </div>
+</div>
+<div class="container section-2" >
+    <div class="row">
+        <div class="top-section pb-2 ">
+            <div class="float-left completed-courses ">باقي المحاضرات</div>
+            <div class="float-right d-flex">
+                <div class="left-icon" id="left-scroll"></div>
+                <div class="right-icon" id="right-scroll"></div>
+            </div>
+        </div>
+        <span class="bar"></span>
+    </div>
+    <div class="row d-flex pt-3 scroll" id="section-2">
+        {% for data2 in course_View %}
+
+        <div class="col-sm text-center">
+            <a class="course-img " href="{% url 'home:videos' data2.categroty  data2.id  %}"></a>
+            <h1 class="course-title">{{data2.video_name}} </h1>
+          </div>
+          {% endfor %}
+
+    </div>
+</div>
+<script>
+const rightButton = document.getElementById('right-scroll');
+const leftButton = document.getElementById('left-scroll');
+    rightButton.onclick=function(){
+    document.getElementById('section-2').scrollLeft +=90;
+}
+leftButton.onclick=function(){
+    document.getElementById('section-2').scrollLeft -=90;
+
+}
+</script>
+</body>
+</html>

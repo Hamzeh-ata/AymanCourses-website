@@ -1,0 +1,79 @@
+<html>
+    {% load static %}
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>courses</title>
+        <link rel="stylesheet" href="{% static '/courses_page.css' %} " >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+     <body>
+ <div class="container-fluid px-0 top-image justify-content-center ">
+           <div class="row no-gutters text-center">
+            <div class="col text-center text-col">
+                <div class="text_container ">
+                    <h2 id="typing" class="text1 align-self-center">
+                        سقف المُمكن.. أعلى بكثير من جهد جميع الأفراد مجتمعين
+                      </h2>
+                      <h1 class="text2 align-self-center" >
+                                 سقف الممكن مذهل </h1>     
+                </div>
+            </div>
+             </div>
+ </div>
+ <div class="container-fluid secition2 justify-content-center">
+         <div class="row row-2 pr-1 pl-1 mr-1 align-self-center align-content-center justify-content-center" id="row-2">
+            {% for data in completedcourses  %}
+            <div class="col btn-col pt-2 pb-2" id="btn-col">
+              <a class="btn1" href="{% url 'home:categorys' data.categroty  %}">
+                             <div class="col-md-5 justify-content-center align-content-center d-flex">
+                                 <img class="pt-1 pb-1 align-self-center img-thumb" src="{% static '/imgs/thumb.png' %}" style="width: 100%; height: 85%;">
+                         
+                             </div>
+                             <div class="col-md-7 d-flex">
+                                 <div class="course-info align-self-center">                        
+                               <div class="title-text pt-1">
+                                   {{data.course_title}}
+                             </div>
+                             <div class="desc-text">
+                                اخل فقاعات من الوهم نعيش، نرى العالم من حولنا بمفاهيمه التى أراد أن يصدرها لنا، نكتفي بالتحسر على الماضي العتيق، تهب علينا الريح من كل مكان سحيق، فيتبدل وعي أجيال كاملة، وتتحول ثقافات
+                             </div>
+                             <div class="course_info pt-1 pb-1">
+                                 <div class="row">
+                                     <div class="col">
+                                           <div class="course_videos_count text-center">
+                                            عدد الدروس
+                                           </div>        
+                                         </div>
+                                     <div class="col">
+                                        <div class="course_time text-center">
+                                        عدد ساعات الدورة 
+                                    </div>
+                                    </div>        
+                                 </div>
+                                 <div class="row">
+                                    <div class="col">
+                                          <div class="course_videos_number text-center">
+                                             {{data.course_count}}
+                                         </div>
+                                      </div>
+                                    <div class="col">
+                                       <div class="course_videos_number text-center">
+                                         {{data.course_length}}
+                                     </div>
+                                   </div>
+                                   </div>
+                             </div>
+                            </div>
+                             </div>
+                            </a>  
+                           </div>
+ {%  if forloop.counter|divisibleby:2 %}
+ <div class="w-100"></div>
+ {% endif %}
+ {% endfor %}
+    </div> 
+   </div>
+  </body>
+</html>
+

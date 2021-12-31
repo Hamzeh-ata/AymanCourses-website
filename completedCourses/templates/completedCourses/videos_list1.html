@@ -1,0 +1,57 @@
+<html>
+    {% load static %}
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'videos_list.css' %} " >
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid sec1">
+            <div class="row h-100 w-100 justify-content-center">
+                <div class="col-3 align-self-end ">
+                <div class="header d-flex justify-content-center">
+                  <img 
+                  {% load static %}
+
+                  src="{% static '/imgs/header_img.png' %}" class="header-img">
+
+                </div> 
+               </div>
+            </div>
+        </div>   
+        <div class="container sec2">
+           <div class="row row-1 d-flex align-content-center justify-content-center" id="row2"></div>
+              {% for video in category_View %}
+                <div class="col-sm align-self-center courses_col pt-2 pb-2 justify-content-center d-flex">
+                     <a class="button-secition" href="{% url 'home:videos' video.categroty  video.id  %}">
+                      <div class="row w-100 ml-0 ">
+                            <div class="col-md-3 justify-content-center d-flex">
+                               <img class="img-thumb " src="{% static '/imgs/ta2ses.png' %}"> 
+                            </div>
+                            <div class="col-md-7 d-flex justify-content-center">
+                                <div class="button-content align-self-center justify-content-center ">
+                                   <div class="video-title text-center align-self-center j">{{video.video_name }}
+                                </div>
+                                   <div class="video-time text-center align-self-center">{{video.video_length}}
+                                </div>
+                                 </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center align-content-center">
+                                <div class="d-s"> 
+                                   <button class="download-button"></button>
+                                   <button class="share-button"></button>
+                                </div>
+                           </div>
+                        </div>
+                    </a>    
+                  </div>
+               {% endfor %}
+
+           
+            </div>
+        </div>
+    </body>
+
+    </html>        

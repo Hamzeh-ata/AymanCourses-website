@@ -1,0 +1,42 @@
+{% load static  %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'books_page.css' %}">
+    </head>
+    <body>
+        <div class="container-fluid sec1">
+            <div class="row h-100 w-100 justify-content-center">
+                <div class="col-3 align-self-end ">
+                <div class="header d-flex justify-content-center">
+                  <img src="{% static 'imgs/header_img.png'%}" class="header-img">
+                </div> 
+               </div>
+            </div>
+        </div>
+        <div class="container secition2 ">
+            <div class="row d-flex justify-content-center">
+{% for data in books%}
+                <div class="col-3 mb-3">
+                    <div class="book-secition">
+                        <div class="book-img-div d-flex justify-content-center">
+                         <img class="book-img" src="{% static '/imgs/jmhrt.png'%}">
+                        </div>
+                        <div class="book-title-div d-flex text-center justify-content-center">
+                         <h1 class="book-title">{{data.book_title}}</h1> 
+                        </div>
+                        <a class="button" href={{data.book_url}}>
+                            <div class="book-button text-center"> نسخة الكترونية</div>
+                         </a>
+                     </div>
+                </div>
+                {%  if forloop.counter|divisibleby:3 %}
+                <div class="w-100"></div>
+                {% endif %}
+{% endfor %}
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+    {% load static %}
+    <head>
+       <meta charset="UTF-8">
+       <title>AUDIO-PAGE</title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <link type="text/css" rel="stylesheet" href="{% static  'courses_audio.css' %}"/>
+    </head>
+    <body>
+        <div class="container-fluid header-image">
+            <div class="row h-100 w-100 justify-content-center">
+                <div class="col-3 align-self-end ">
+                <div class="header d-flex justify-content-center">
+                  <img class="header-img" src="/static/imgs/header_img.png">
+                </div> 
+               </div>
+            </div>
+        </div>    
+<div class="container section-1 mb-5" >
+<div class="row ">
+    <div class="col-lg-12 pl-0 ">
+        {% for data in courses_Audio %}
+    <div class="row align-content-center justify-content-center mt-4 audio-col d-flex text-center">
+    <div class="col-2 justify-content-center  align-self-center d-flex">
+     <a class="play-button" id="play-button" href="{% url 'audio:coursesAudio' data.categroty data.id  %}"></a>
+    </div>
+    <div class="col-6 justify-content-center  align-self-center ">
+        <h3 class="title text-center">{{data.audio_title}}</h3>
+    </div>
+    <div class="col-2 justify-content-center align-self-center ">
+        <h3 class="length">{{data.audio_length}}</h3>
+    </div>
+    <div class="col-1 justify-content-center align-self-center ">
+        <a class="share"></a>
+    </div>
+    <div class="col-1 justify-content-center align-self-center ">
+        <a class="download" ></a>
+    </div>
+    </div>
+    {% endfor %}
+
+ </div>
+</div>
+</div>
+<div class="container section-3 fixed-bottom">
+    <div class="row">
+        <div class="col-8 d-flex justify-content-center align-content-center">
+            <audio  class="audiplay" style="width: 700px;" nodownload id="my-audio">
+                {% for data1 in courses_player %}
+
+                <source src="{{data1.audio_src}}" type="audio/mp3">
+
+            </audio>
+        </div>
+        <div class="col-4">
+            <div class="plyer-title-div justify-content-center text-center d-flex">
+                <h3 class="plyer-title align-self-center ">{{data1.audio_title}}</h3>
+                {% endfor %}
+
+            </div>
+          
+        </div>
+    </div>
+
+</div>
+<script src="{% static 'coureses_audio.js' %}"></script>
+    </body>
+  
+</html>

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=El+Messiri:wght@500&family=Jomhuria&family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Jomhuria&family=Lalezar&display=swap');
+
+.container-fluid {
+    padding-right:0 !important;
+    padding-left:0 !important;
+    margin-right:auto;
+    margin-left:auto
+ }
+.top-image{
+    background-image: url(./imgs/background.png);
+    height: 350px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: cover;
+    display: flex;
+}
+body{
+    text-align: center;
+    background: url(./imgs/background2.png);
+}
+.cover_image{
+    height: 500px;
+    min-height: 320px;
+  
+    width: 450px;
+    min-width: 320px;
+    content: url(./imgs/ayman_courses.png);
+
+  }  
+
+  .img-col{
+  
+    justify-content: center;
+    display: flex;
+  }
+  .img-cont{
+    width: 50%;
+    min-width: 420px;
+   display: flex;
+
+    }
+
+
+.img_thumb{
+    height: 200px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.secition2{
+    height: auto;
+    padding-top: 20px;
+    display: flex;
+
+}
+
+
+
+.row-1{
+    text-align-last: center;
+
+}
+.text-col{
+    align-self: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+}
+.text1{
+    color:#c9c9c9;
+    font-size: 20px;
+    background-color: #25262a;
+    padding: 10px 22px 10px 22px;
+    font-family: 'El Messiri', sans-serif;}
+.text2{
+    color:#f9f7f7;
+     padding-top: 10px;
+     font-size: 42px;
+     font-family: 'Jomhuria', cursive;
+}
+.btn1{
+    background-color: #2b2c30;
+    border-radius: 10px;
+    border-color: #302f2f;
+    border-width: 1px;
+    width: 600px;
+    height:auto ;
+    display: flex;
+    padding: 2rem !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.btn1:hover{
+    transform: translateY(-10px);
+    
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.img-thumb{
+    border-radius: 10px !important;
+}
+.img-thumb:hover{
+    transform: scale(1.1);
+}
+.btn-row{
+
+}
+.row-2{
+    max-width:75%;
+    height: auto;
+
+}
+.btn-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-text{
+    color: white;
+    font-size: 22px;
+
+}
+.desc-text{
+   color:#c9c9c9;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.course_info{
+  border-top: 1px dotted #c5c5c5;
+border-bottom: 1px dotted #c5c5c5;
+}
+.course_videos_number{
+    color:#c9c9c9;
+    font-size: 11px;
+
+}
+.course_videos_count{
+    color:white;
+    font-size: 11px;
+}
+.course_time{
+    color:white;
+    font-size: 11px;
+}
+.info_row{
+    display: block;
+}
+.course-info{
+    height: auto;
+}
+.col{
+    padding-right: 0px !important;
+    max-width: 600px !important;
+
+}
+
+

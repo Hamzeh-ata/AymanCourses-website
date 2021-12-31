@@ -1,0 +1,215 @@
+body{
+    background-color: #25262a !important;
+}
+.section-1{
+    background-color: #28292d;
+    height: 540px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 10px;
+    max-width: 400px;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+    margin-top: 20px;
+}
+::-webkit-scrollbar {
+   width: 0;  /* Remove scrollbar space */
+     background: transparent;  /* Optional: just make scrollbar invisible */
+     display: none;
+   
+}
+.header {
+    height: 220px;
+}
+.header-img{
+    height: 100%;
+    content: url(/static/imgs/header_img.png);
+
+}
+.container{
+    max-width: 920px !important;
+}
+
+.audio-col{
+    background-color: #25262a;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 100%;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    border-radius: 15px;
+}
+.play-button{
+    content: url(./imgs/play_icon.png);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.title{
+    color: white;
+    font-size: 15px;
+}
+.length{
+    color: white;
+    font-size: 15px;
+}
+.download{
+    height: 30px;
+    content: url(./imgs/download-icon.png);
+    width: 30px;
+    border:none;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.share{
+    height: 30px;   
+    width: 30px;
+    content: url(./imgs/share-icon.png);
+    background-position: center;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+.course-img{
+    content: url(./imgs/course-img.jpg);
+    height: 190px;   
+    width: 100%;
+    display: inline-block !important; 
+    cursor: pointer;
+}
+.section-2{
+    background-color: #28292d;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 9px;
+    margin-bottom: 60px;
+}
+.scroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap !important;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+}
+.col-2{
+    display: inline-block;
+}
+.top-section{
+    width: 100%;
+}
+.course-title{
+    font-size: 15px;
+    color: white;
+    padding-top: 2px;
+    display: inline-block !important; 
+}
+.completed-courses{
+    color: white;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.bar{
+background-color: #979393;   
+width: 100%;
+height: 1.0px;
+
+}
+.right-icon{
+    content: url(./imgs/right.png);
+    width: 100%;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+.left-icon{
+    content: url(./imgs/left.png);
+    width: 100%;
+    height: 30px;
+    margin-right: 10px;
+   cursor: pointer;
+}
+.header-image{
+    background-color: #2b2c30;
+    height: 220px;
+    display: flex;
+}
+.section-3{
+    background-color: #171717;   
+    padding: 5px;
+    margin-top: 60px;
+}
+.ap_container{
+    background-color: #171717 !important;   
+}
+.col-3{
+    padding-bottom: 10px;
+}
+audio {
+    width:100%;
+    background-color: #979393;   
+    border-top-right-radius: 0.0em 0.0em !important;
+    border-bottom-right-radius: 0em 0.0em !important;
+  }
+  .plyer-title{
+    color: #c1d1dd;
+    font-size: 16px;
+  }
+  .plyer-title-div{
+      height: 100%;
+  }
+  audio::-webkit-media-controls-panel{
+    border-top-right-radius: 0.0em 0.0em !important;
+    border-bottom-right-radius: 0em 0.0em !important;
+    background-color: #979393;   
+  }
+  audio::-webkit-media-controls-timeline-container{
+    border-top-right-radius: 0.0em 0.0em !important;
+    border-bottom-right-radius: 0em 0.0em !important;
+
+  }
+  .duration{
+      display: flex !important;
+  }
+  .duration_slider{
+      align-self: center;
+
+  }
+  .playpausebtn{
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    justify-self: center;
+
+  }
+  .ap_loop{
+    align-self: center;
+background-repeat: no-repeat;
+  }
+  .ap_container .playpausebtn{
+    border-radius: 0px !important;
+
+  }
+  .ap_controls input[type="range"]{
+    background-color: #25262a;
+
+  }
+  .ap_time{
+      color: #c1d1dd;
+  }
+  .ap_sound{
+      align-self: center;
+  }
+  input[type="range"]::-moz-range-progress {
+    background-color: #979393; 
+  }
+
+  /* IE*/
+  input[type="range"]::-ms-fill-lower {
+    background-color: #979393; 
+  }

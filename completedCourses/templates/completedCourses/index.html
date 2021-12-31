@@ -1,0 +1,113 @@
+
+<html>
+  {% load static %}
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="{% static 'home.css' %} " >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid px-0 sec1">
+      <div class="row row-1">
+        <div class="col-lg-6 text-center text-col">
+          <div class="text-container">
+            <h1 id="typing" class="text1 align-self-center">
+              بسم الله و الصلاة و السلام على رسول الله
+            </h1>
+            <h2 class="text2 align-self-center">
+              الحمد لله الذي علم بالقلم علم الانسان ما لم يعلم
+            </h2>
+            <h3 class="text3 align-self-center">
+              و الصلاة و السلام على خير معلم الناس الخير محمد و بعد
+            </h3>
+          </div>
+        </div>
+        <div
+          id="img1"
+          class="col-lg-6 img-cover img-responsive align-items-center">
+          <div class="img-right"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid sec2 text-center">
+      <div class="row row-2 mt-5">
+        <div class="col-lg-4 align-self-center courses_col pt-4 pb-4 align-content-center">  
+          {% load static %}
+
+          <a id="coursa" class="courses text-center d-flex align-content-center" href="{% url 'home:completedcourses' %}">
+           <div class="content">
+              <div class="img_courses align-self-center align-content-center">
+              <img class="img" 
+              {% load static %}
+              src="{% static 'imgs/courses_icon.png' %}" />
+            </div>
+            <div class="button_text align-self-center">
+              <span class="span-text" id="span">
+                دورات مكتملة للمهندس ايمن عبد الرحيم
+              </span>
+            </div>
+          </div>
+          </a>
+        </div>
+        <div class="col-lg-4 align-self-center videos_col pt-4 pb-4">
+          <a class=" text-center d-flex align-content-center"  href="{% url 'home3:shorts' %}">
+          <div class="content">
+            <div class="img_courses">
+            <img  class="video_img" {% load static %}
+                        
+
+            src="{% static 'imgs/videos_icon.png'%}">
+                    
+            </div>
+            <div class="button_text">
+            <span class="span-text">
+              مقاطع قصيرة للمهندس ايمن عبد الرحيم
+            </span>
+          </div>
+        </div>
+      </a>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-lg-4 align-self-center books_col pt-4 pb-4">
+          <a class="books text-center d-flex align-content-center" href="{% url 'home2:books' %}">
+            <div class="content">
+            <div class="img_courses">
+            <img class="img"
+            {% load static %}
+            src="  {% static 'imgs/books_icon.png' %}">
+            </div>
+            <div class="button_text">
+            <span class="span-text">
+              محتوى كتابي للمهندس ايمن عبد الرحيم 
+           </span>
+          </div>
+        </div>
+      </a>
+        </div>
+
+        <div class="col-lg-4 align-self-center books_col pt-4 pb-4">
+          <a class="books text-center d-flex align-content-center" href="{% url 'home1:audio' %}">
+            <div class="content">
+            <div class="img_courses">
+            <img class="img"
+            {% load static %}
+            src="  {% static 'imgs/audio_icon.png' %}">
+            </div>
+            <div class="button_text">
+            <span class="span-text">
+              محتوى صوني للمهندس ايمن عبد الرحيم 
+           </span>
+          </div>
+        </div>
+      </a>
+        </div>  
+   
+      </div>
+    </div>
+  </body>
+  <script src="one.js"></script>
+</html>

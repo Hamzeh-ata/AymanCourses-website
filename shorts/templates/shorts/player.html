@@ -1,0 +1,39 @@
+<html>
+    {% load static %}
+<head>
+ <meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'player.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<ul class="">
+    <li class="text-center "><a herf="index.html" onclick="window.open('index.html','_self')">الرئيسية</a></li>
+    <li><a herf="index.html">الدورات</a></li>
+    <li><a herf="index.html">مقاطع قصيرة</a></li>
+    <li><a herf="index.html">محتوى صوتي</a></li>
+    <li><a herf="index.html">{{video_View.id}}</a></li>
+</ul>
+<div class="container">
+    <div class="text-wrap justify-content-center mt-5">
+    <div class="video_title text-center" ></div>
+</div>
+<div class="wrap-video justify-content-center mt-4">
+    {% for videos in video_View %}
+    <iframe     {% load static %}  width="420" height="345" src="{{videos.video_url}}">
+    </iframe>
+    {% endfor %}
+    </div>
+    <div class="row justify-content-around mt-5">
+        <div class="col-lg-2">
+            <button class="next-tutorial justify-content-center mb-2 mt-2">المحاضرة التالية</button>
+        </div>
+        <div class="col-lg-2">
+            <button class="prev-tutorial text-center mb-2 mt-2">المحاضرة السابقة</button>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
